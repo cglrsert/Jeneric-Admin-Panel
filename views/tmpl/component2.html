@@ -1,0 +1,79 @@
+
+
+
+
+            <div class="form-group" ng-repeat="compField in field.component_params.fields track by $index" ng-switch on="compField.type" ng-if="field.component_params.type=='form'">
+                <label for="{{field.param}}"><span ng-if="compField.is_required==true && field.type!='hidden'"  style="color: red"><b>*&nbsp;</b></span><b>{{compField.label}}</b></label>
+
+                <label ng-switch-when="label" tabindex="{{compField.tabIndex}}" id="{{compField.param}}" name="{{compField.param}}" ng-model="Models[compField.param]" ng-value="{{compField.value}}" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}" style="width:0.1px;"></label>
+                <input ng-switch-default tabindex="{{field.tabIndex}}" placeholder="{{field.placeholder}}" type="{{field.type}}" class="form-control" id="{{field.param}}" name="{{field.param}}" ng-model="Models[field.param]" ng-value="" input-mask="{{field.mask}}" ng-validation="{{field.validation}}"/>
+                <input ng-switch-when="text" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" type="{{compField.type}}" class="form-control" id="{{compField.param}}" name="{{compField.param}}" ng-model="Models[compField.param]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}"/>
+                <textarea ng-switch-when="textarea" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" class="form-control" id="{{compField.param}}" name="{{compField.param}}" ng-model="Models[compField.param]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}"></textarea>
+                <input ng-switch-when="date" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" type="datetime-local" class="form-control date-picker" id="{{compField.param}}" name="{{compField.param}}" ng-model="Models[compField.param]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}"/>
+                <input ng-switch-when="datetime" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" type="text" class="form-control date-time-picker" id="{{compField.param}}" name="{{compField.param}}" ng-model="Models[compField.param]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}"/>
+                <select ng-switch-when="select" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" class="form-control" id="{{compField.param}}" name="{{compField.param}}" ng-model="Models[compField.param]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}">
+                    <option selected="true" value="">Seçiniz</option>
+                    <option ng-repeat="option in compField.value" value="{{option.key}}">{{option.value}}</option>
+                </select>
+                <select ng-switch-when="fk_select" ng-init="fillOptions(compField)" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" class="form-control" id="{{compField.param}}" name="{{compField.param}}" ng-model="Models[compField.param][$index]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}">
+                    <option selected="true" value="">Seçiniz</option>
+                    <option ng-repeat="option in compField.value" value="{{option.key}}">{{option.value}}</option>
+                </select>
+            </div>
+
+
+			<div class="form-group" ng-repeat="compField in field.component_params.fields track by $index" ng-switch on="compField.type" ng-if="field.component_params.type=='list'">
+				<label for="{{field.param}}"><span ng-if="compField.is_required==true && field.type!='hidden'"  style="color: red"><b>*&nbsp;</b></span>{{compField.label}}</label>
+
+                <label ng-switch-when="label" tabindex="{{compField.tabIndex}}" id="{{compField.param}}" name="{{compField.param}}{{$index}}" ng-model="Models[compField.param][$index]" ng-value="{{compField.value}}" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}" style="width:0.1px;"></label>
+                <input ng-switch-default tabindex="{{field.tabIndex}}" placeholder="{{field.placeholder}}" type="{{field.type}}" class="form-control" id="{{field.param}}" name="{{field.param}}{{$index}}" ng-model="Models[field.param][$index]" ng-value="" input-mask="{{field.mask}}" ng-validation="{{field.validation}}"/>
+				<input ng-switch-when="text" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" type="{{compField.type}}" class="form-control" id="{{compField.param}}" name="{{compField.param}}{{$index}}" ng-model="Models[compField.param][$index]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}"/>
+				<textarea ng-switch-when="textarea" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" class="form-control" id="{{compField.param}}" name="{{compField.param}}{{$index}}" ng-model="Models[compField.param][$index]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}"></textarea>
+				<input ng-switch-when="date" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" type="datetime-local" class="form-control date-picker" id="{{compField.param}}" name="{{compField.param}}{{$index}}" ng-model="Models[compField.param][$index]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}"/>
+				<input ng-switch-when="datetime" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" type="text" class="form-control date-time-picker" id="{{compField.param}}" name="{{compField.param}}{{$index}}" ng-model="Models[compField.param][$index]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}"/>
+				<select ng-switch-when="select" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" class="form-control" id="{{compField.param}}" name="{{compField.param}}{{$index}}" ng-model="Models[compField.param][$index]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}">
+					<option selected="true" value="">Seçiniz</option>
+					<option ng-repeat="option in compField.value" value="{{option.key}}">{{option.value}}</option>
+				</select>
+				<select ng-switch-when="fk_select" ng-init="fillOptions(compField)" tabindex="{{compField.tabIndex}}" placeholder="{{compField.placeholder}}" class="form-control" id="{{compField.param}}" name="{{compField.param}}" ng-model="Models[compField.param][$index]" ng-value="" input-mask="{{compField.mask}}" ng-validation="{{compField.validation}}">
+					<option selected="true" value="">Seçiniz</option>
+					<option ng-repeat="option in compField.value" value="{{option.key}}">{{option.value}}</option>
+				</select>
+			</div>
+
+
+			<div class="form-group" ng-if="field.component_params.type=='table'">
+				<table class="table table-striped table-bordered">
+					<thead>
+					<tr>
+						<th style="text-align:center ; width: 450px">Yolcu/Araç Tipi</th>
+						<th style="text-align:center">Ücret</th>
+					</tr>
+					</thead>
+					<tbody id="tableComponent">
+					<tr ng-repeat="compField in field.component_params.fields track by $index" ng-init="listIndex = $index">
+						<td ng-repeat="dataField in compField.data" ng-switch on="dataField.type">
+							<label id="datasds-{{listIndex}}" data-value="{{dataField.value}}" ng-switch-when="label" tabindex="{{dataField.tabIndex}}" name="{{dataField.param}}{{listIndex}}" ng-model="Models[dataField.param][listIndex]" ng-value="dataField.value" input-mask="{{dataField.mask}}" ng-validation="{{dataField.validation}}">{{dataField.label}}</label>
+							<input ng-switch-default tabindex="{{dataField.tabIndex}}" placeholder="{{dataField.placeholder}}" type="{{dataField.type}}" class="form-control" id="{{dataField.param}}" name="{{dataField.param}}{{listIndex}}" ng-model="Models[field.param][listIndex]" ng-value="" input-mask="{{field.mask}}" ng-validation="{{field.validation}}"/>
+							<input id="datasds2-{{listIndex}}" ng-switch-when="text" tabindex="{{dataField.tabIndex}}" placeholder="{{dataField.placeholder}}" type="{{dataField.type}}" class="form-control" id="{{dataField.param}}" name="{{dataField.param}}{{listIndex}}" ng-model="Models[dataField.param][listIndex]" ng-value="" input-mask="{{dataField.mask}}" ng-validation="{{dataField.validation}}"/>
+							<textarea ng-switch-when="textarea" tabindex="{{dataField.tabIndex}}" placeholder="{{dataField.placeholder}}" class="form-control" id="{{dataField.param}}" name="{{dataField.param}}{{listIndex}}" ng-model="Models[dataField.param][listIndex]" ng-value="" input-mask="{{dataField.mask}}" ng-validation="{{dataField.validation}}"></textarea>
+							<input ng-switch-when="date" tabindex="{{dataField.tabIndex}}" placeholder="{{dataField.placeholder}}" type="text" class="form-control date-picker" id="{{dataField.param}}" name="{{dataField.param}}{{listIndex}}" ng-model="Models[dataField.param][listIndex]" ng-value="" input-mask="{{dataField.mask}}" ng-validation="{{dataField.validation}}"/>
+							<input ng-switch-when="datetime" tabindex="{{dataField.tabIndex}}" placeholder="{{dataField.placeholder}}" type="text" class="form-control date-time-picker" id="{{dataField.param}}" name="{{dataField.param}}{{listIndex}}" ng-model="Models[dataField.param][listIndex]" ng-value="" input-mask="{{dataField.mask}}" ng-validation="{{dataField.validation}}"/>
+							<select ng-switch-when="select" tabindex="{{dataField.tabIndex}}" placeholder="{{dataField.placeholder}}" class="form-control" id="{{dataField.param}}" name="{{dataField.param}}{{listIndex}}" ng-model="Models[dataField.param][listIndex]" ng-value="" input-mask="{{dataField.mask}}" ng-validation="{{dataField.validation}}">
+								<option selected="true" value="">Seçiniz</option>
+								<option ng-repeat="option in dataField.value" value="{{option.key}}">{{option.value}}</option>
+							</select>
+							<select ng-switch-when="fk_select" ng-init="fillOptions(dataField)" tabindex="{{dataField.tabIndex}}" placeholder="{{dataField.placeholder}}" class="form-control" id="{{dataField.param}}" name="{{dataField.param}}" ng-model="Models[dataField.param][listIndex]" ng-value="" input-mask="{{dataField.mask}}" ng-validation="{{dataField.validation}}">
+								<option selected="true" value="">Seçiniz</option>
+								<option ng-repeat="option in dataField.value" value="{{option.key}}">{{option.value}}</option>
+							</select>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+		
+			
+
+

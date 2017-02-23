@@ -1,0 +1,12 @@
+<div class="panel-body">
+     
+      <ul id="navigation" nav-collapse="" ripple="" class="ng-scope"  ng-controller="leftBarController">
+
+        <li ng-class="{active : activeMenu === entity.name_tr}" ui-sref-active="active" class="" ng-if="entity.is_visible==true" ng-repeat="entity in entityList">
+		  
+			<a  ng-click="setActive(entity.name_tr)" href="#/app/{{entity.name}}/view"><i ng-class="'fa fa-'+entity.icon" name="dashboard"></i> <span>{{ entity.name_tr }}</span></a>
+
+		</li>
+         
+      </ul>
+</div>

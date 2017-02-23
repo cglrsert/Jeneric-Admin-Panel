@@ -1,0 +1,15 @@
+<section ng-include="'views/header.html'" id="header" class="{{main.settings.navbarHeaderColor}}"></section>
+
+<div id="controls" >
+
+  <aside ng-include="'views/leftbar.html'" id="sidebar" class="{{main.settings.sidebarColor}}" ng-class="{'aside-fixed':main.settings.asideFixed}"></aside>
+
+ 
+
+</div>
+
+<div class="view-container" ui-view-container>
+
+  <section ui-view id="content" autoscroll="false"></section>
+</div>
+ 

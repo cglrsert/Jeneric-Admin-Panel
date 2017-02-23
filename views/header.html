@@ -1,0 +1,57 @@
+<header class="clearfix">
+
+  <!-- Branding -->
+  <div class="branding">
+    <a class="brand" href="#/app">
+      <span> <b>Jenerik</b>  Admin Panel</span>
+    </a>
+    <a href="javascript:;" class="offcanvas-toggle visible-xs-inline" offcanvas-sidebar><i class="fa fa-bars"></i></a>
+  </div>
+  <!-- Branding end -->
+
+
+
+  <!-- Left-side navigation -->
+  <ul class="nav-left pull-left list-unstyled list-inline">
+    <li class="sidebar-collapse divided-right">
+      <a href="javascript:;" collapse-sidebar>
+        <fa name="outdent"></fa>
+      </a>
+    </li>
+
+  </ul>
+  <!-- Left-side navigation end -->
+
+
+
+
+
+
+
+
+  <!-- Right-side navigation -->
+  <ul class="nav-right pull-right list-inline ">
+
+
+
+    <li ng-controller="tokenController"  class="dropdown nav-profile" uib-dropdown>
+      <a href  ng-click="logout()">
+        <i class="fa fa-sign-out" title="Çıkış Yap"></i>
+        Çıkış Yap
+      </a>
+
+
+    </li>
+
+
+    <li >
+      <a href="javascript:;" ng-click="main.settings.rightbarShow = !main.settings.rightbarShow">
+
+      </a>
+    </li>
+  </ul>
+  <!-- Right-side navigation end -->
+
+
+
+</header>

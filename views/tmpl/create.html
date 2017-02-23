@@ -1,0 +1,178 @@
+<div class="page page-form-validate">
+
+  <!-- page header -->
+  <div class="pageheader">
+
+
+    <div class="page-bar">
+
+      <ul class="page-breadcrumb">
+        <li>
+          <a ui-sref="app.dashboard"><i class="fa fa-home"></i> Anasayfa</a>
+        </li>
+        <li>
+          <a href="#/app/{{entityName}}/view">{{entityTrName}}</a>
+        </li>
+        <li>
+          <a href="#">Yeni {{pageName}} Ekleme</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+  <!-- /page header -->
+
+
+
+
+
+
+  <!-- page content -->
+  <div class="pagecontent">
+
+
+    <!-- row -->
+    <div class="row">
+
+
+      <!-- col -->
+
+      <!-- /col -->
+
+
+
+      <!-- col -->
+      <div class="col-md-12">
+       <form name="createForm" ng-submit="sendData(createForm)" ng-validate="validationOptions" role="form" ng-valid>
+          <!-- tile -->
+          <section class="tile" fullscreen="isFullscreen04">
+
+            <!-- tile header -->
+            <div class="tile-header dvd dvd-btm">
+              <h1 class="custom-font"><b>Yeni {{pageName}} Ekleme</b></h1>
+              <ul class="controls">
+                <li class="dropdown" uib-dropdown on-toggle="toggled(open)">
+
+                  <a href uib-dropdown-toggle class="dropdown-toggle settings"><i class="fa fa-cog"></i></a>
+
+                  <ul class="dropdown-menu pull-right with-arrow animated littleFadeInUp">
+                    <li>
+                      <a href tile-control-toggle>
+                        <span class="minimize"><fa name="angle-down"></fa>&nbsp;&nbsp;&nbsp;Minimize</span>
+                        <span class="expand"><fa name="angle-up"></fa>&nbsp;&nbsp;&nbsp;Expand</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href tile-control-refresh ng-click="ajaxFaker()">
+                        <fa name="refresh"></fa> Refresh
+                      </a>
+                    </li>
+                    <li>
+                      <a href tile-control-fullscreen ng-click="isFullscreen04 = !isFullscreen04">
+                        <fa name="expand"></fa> Fullscreen
+                      </a>
+                    </li>
+
+                  </ul>
+
+                </li>
+                <li ><a href ng-click="back();"><i class="fa fa-times"></i></a></li>
+              </ul>
+            </div>
+            <!-- /tile header -->
+
+            <!-- tile body -->
+            <div class="tile-body">
+ 
+
+
+ 
+	<div class="form-group" ng-repeat="field in fieldList track by $index" ng-switch on="field.type" ng-if="field.is_create==true">
+
+		<label ng-if="field.type!='component'" for="{{field.param}}"><span ng-if="field.is_required==true && field.type!='hidden'" style="color: red"><b>*&nbsp;</b></span><b>{{field.label}}</b></label>
+
+        <p class="input-group" ng-switch-when="date">
+            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" is-open="opened[$index]" min-date="minDate" datepicker-options="dateOptions" date-disabled="disabled(date,mode)" tabindex="{{field.tabIndex}}" placeholder="{{field.placeholder}}" id="{{field.param}}" name="{{field.param}}" ng-model="Models[field.param]" input-mask="{{field.mask}}" ng-value="" close-text="Kapat"/>
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($index)"><i class="fa fa-calendar"></i></button>
+            </span>
+        </p>
+
+        <p class="input-group" ng-switch-when="datetime">
+            <input type="text" class="form-control" datetime-picker="{{dateFormat}}" is-open="opened[$index]" min-date="minDate" datepicker-options="dateOptions" timepicker-options="timeOptions" tabindex="{{field.tabIndex}}" placeholder="{{field.placeholder}}" id="{{field.param}}" name="{{field.param}}" ng-model="Models[field.param]" input-mask="{{field.mask}}" ng-value="" close-text="Kapat"/>
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($index)"><i class="fa fa-calendar"></i></button>
+            </span>
+        </p>
+
+        <input ng-switch-when="text" tabindex="{{field.tabIndex}}" placeholder="{{field.placeholder}}" type="text" class="form-control" id="{{field.param}}" name="{{field.param}}" ng-model="Models[field.param]" input-mask="{{field.mask}}"/>
+		<textarea ng-switch-when="textarea" tabindex="{{field.tabIndex}}" placeholder="{{field.placeholder}}" class="form-control" id="{{field.param}}" name="{{field.param}}" ng-model="Models[field.param]" ng-value="" ng-mask="{{field.mask}}"></textarea>
+		<select ng-switch-when="select" tabindex="{{field.tabIndex}}" placeholder="{{field.placeholder}}" class="form-control" id="{{field.param}}" name="{{field.param}}" ng-model="Models[field.param]" ng-value="" ng-mask="{{field.mask}}">
+			<option selected="true" value="">Seçiniz</option>
+			<option ng-repeat="option in field.value" value="{{option.key}}">{{option.value}}</option>
+		</select>
+		<select ng-switch-when="fk_select" ng-init="fillOptions(field)" tabindex="{{field.tabIndex}}"  placeholder="{{field.placeholder}}" class="form-control" id="{{field.param}}" name="{{field.param}}" ng-model="Models[field.param]" ng-value="" ng-mask="{{field.mask}}">
+			<option selected="true" value="">Seçiniz</option>
+			<option ng-repeat="option in field.value" value="{{option.key}}">{{option.value}}</option>
+		</select>
+	
+	
+		<div ng-switch-when="component" id="{{field.param}}" ng-init="(field.component_params.binder == null) ? addComponent(field.param) : ''">
+
+            <!-- if binder is to be shown -->
+
+			<div class="form-group" ng-switch on="field.component_params.binder.fields.type" ng-if="field.component_params.binder != null">
+				<label ng-switch-when="checkbox" ng-init="addComponent(field.param)" class="checkbox checkbox-custom-alt checkbox-custom-sm"><input ng-click="closeCheck1()" id="checkBox" type="checkbox" ng-init="isShown=false" ng-change="resetCompModels(field)" ng-model="Models[field.component_params.binder.fields.value]"><i></i>{{field.component_params.binder.fields.label}}</label>
+				<div ng-switch-when="switch" class="onoffswitch greensea inline-block"> <input id="checkBox" name="onoffswitch" class="onoffswitch-checkbox" id="switch" checked="checked"> <label class="onoffswitch-label" for="switch"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span></label></div>
+				<label ng-switch-when="radio" class="checkbox checkbox-custom-alt checkbox-custom-sm"> <input name="customRadioAlt" type="radio"><i></i>{{field.component_params.binder.fields.label}}</label>
+				<a ng-switch-when="button" ng-init="isShown=true" ng-click="addComponent(field.param)" class="btn btn-ef btn-ef-1 btn-ef-1-primary btn-ef-1a mb-10">{{field.component_params.binder.fields.label}}</a>
+			</div>
+
+            <!-- component -->
+
+			<div ng-show="isShown || (Models[field.component_params.binder.fields.value] == field.component_params.binder.condition)" ui-view></div>
+
+		</div>
+
+	</div>
+
+            </div>
+            <!-- /tile body -->
+
+            <!-- tile footer -->
+            <div class="tile-footer text-center bg-tr-black lter dvd dvd-top">
+              <!-- SUBMIT BUTTON -->
+              <button type="submit"   class="btn btn-success mb-10"> KAYDET</button>
+              <a class="btn btn-danger mb-10" style="width: 80.58px" ng-click="goBack()"> İPTAL</a>
+            </div>
+            <!-- /tile footer -->
+
+          </section>
+          <!-- /tile -->
+
+        </form>
+
+
+
+      </div>
+      <!-- /col -->
+
+
+
+    </div>
+    <!-- /row -->
+
+
+
+
+
+  </div>
+  <!-- /page content -->
+
+
+
+
+</div>
+
+

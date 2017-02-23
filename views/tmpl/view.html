@@ -1,0 +1,78 @@
+<div class="page page-datatables">
+
+    <!-- page content -->
+    <div class="pagecontent">
+
+
+        <!-- row -->
+        <div class="row">
+            <!-- col -->
+            <div class="col-md-12">
+
+                <!-- tile -->
+                <section class="tile" fullscreen="isFullscreen04">
+
+                    <!-- tile header -->
+                    <div class="tile-header dvd dvd-btm">
+                        <h1 class="custom-font"><strong>{{entityTrName}}</strong></h1>
+                        <ul class="controls">
+                            <li ng-show="hasFilter" ng-click="filterOnOff(val)" ng-model="val" ng-class="val ? 'filterActive' : ''" ng-init="val=true"><a href><i class="fa fa-filter"></i></a></li>
+                            <li class="dropdown" uib-dropdown on-toggle="toggled(open)">
+
+                                <a href uib-dropdown-toggle class="dropdown-toggle settings"><i class="fa fa-cog"></i></a>
+
+                                <ul class="dropdown-menu pull-right with-arrow animated littleFadeInUp">
+                                    <li>
+                                        <a href tile-control-toggle>
+                                            <span class="minimize"><fa name="angle-down"></fa>&nbsp;&nbsp;&nbsp;Minimize</span>
+                                            <span class="expand"><fa name="angle-up"></fa>&nbsp;&nbsp;&nbsp;Expand</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href tile-control-refresh ng-click="ajaxFaker()">
+                                            <fa name="refresh"></fa> Refresh
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href tile-control-fullscreen ng-click="isFullscreen04 = !isFullscreen04">
+                                            <fa name="expand"></fa> Fullscreen
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+                            <li class="remove"><a href tile-control-close><i class="fa fa-times"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /tile header -->
+
+                    <!-- tile body -->
+                    <div class="tile-body" ng-controller="viewController as showCase">
+
+                        <table datatable="" dt-options="showCase.dtOptions" dt-columns="showCase.dtColumns" dt-instance="showCase.dtInstance"  class="table table-custom">
+                            <tfoot ng-if="!is_pagination" style="display: table-header-group">
+                            <tr>
+                                <td ng-repeat="title in filterTitles">{{title}}</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+                    <!-- /tile body -->
+
+                </section>
+                <!-- /tile -->
+
+
+
+            </div>
+            <!-- /col -->
+        </div>
+        <!-- /row -->
+
+    </div>
+    <!-- /page content -->
+
+
+</div>

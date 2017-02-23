@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminService" ng-controller="MainCtrl" ng-init="clearCache()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jeneric Admin Panel</title>
+
+    <!-- bower:css -->
+     <link rel="stylesheet" href="styles/vendor.0cc3d200.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css">
+    <!-- endbuild -->
+    
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    a.dt-button.createButton {
+      color: #fff;
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+      display: inline-block;
+      margin-bottom: 0px;
+      padding: 6px 12px;
+      text-align: center;
+      white-space: nowrap;
+      touch-action: manipulation;
+      cursor: pointer;
+      user-select: none;
+      background-image: none;
+      border: 1px solid transparent;
+    }
+    #DataTables_Table_0_filter input{
+      height: 20px;
+      border: 1px solid #5cb85c;
+    }
+
+    #DataTables_Table_0_info{
+      font-weight: bold;
+    }
+
+    #DataTables_Table_0_processing{
+      font-weight: bold;
+    }
+
+    #DataTables_Table_0_length label{
+      font-weight: bold;
+    }
+
+    .table.table-custom > tbody > tr td{
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .table.table-custom > thead > tr th{
+      text-align: center;
+    }
+
+  </style>
+</head>
+  <body id="minovate" class="{{main.settings.navbarHeaderColor}} {{main.settings.activeColor}} {{containerClass}} header-fixed aside-fixed rightbar-hidden appWrapper" ng-class="{'header-fixed': main.settings.headerFixed, 'header-static': !main.settings.headerFixed, 'aside-fixed': main.settings.asideFixed, 'aside-static': !main.settings.asideFixed, 'rightbar-show': main.settings.rightbarShow, 'rightbar-hidden': !main.settings.rightbarShow}">
+
+    <div id="wrap" ui-view autoscroll="false"></div>
+    <!-- Page Loader -->
+    <div id="pageloader" page-loader></div>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- bower:js -->
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="bower_components/jquery-inputmask/dist/jquery.inputmask.bundle.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-validate/dist/angular-validate.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+    <script src="bower_components/angular-bootstrap-nav-tree/dist/abn_tree_directive.js"></script>
+    <script src="bower_components/chosen/chosen.jquery.min.js"></script>
+    <script src="bower_components/angular-chosen-localytics/chosen.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/datatables/js/jquery.dataTables.js"></script>
+    <script src="bower_components/jquery-datatables-columnfilter/jquery.dataTables.columnFilter.js"></script>
+    <script src="bower_components/jquery-datatables-light-columnfilter/dist/dataTables.lightColumnFilter.min.js"></script>
+    <script src="bower_components/select2/dist/js/select2.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/angular-datatables.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/colreorder/angular-datatables.colreorder.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/columnfilter/angular-datatables.columnfilter.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/light-columnfilter/angular-datatables.light-columnfilter.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/colvis/angular-datatables.colvis.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/fixedcolumns/angular-datatables.fixedcolumns.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/fixedheader/angular-datatables.fixedheader.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/scroller/angular-datatables.scroller.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/tabletools/angular-datatables.tabletools.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.min.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <script src="bower_components/angular-flot/angular-flot.js"></script>
+    <script src="bower_components/angular-fontawesome/dist/angular-fontawesome.js"></script>
+    <script src="bower_components/angular-fullscreen/src/angular-fullscreen.js"></script>
+    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/leaflet/dist/leaflet-src.js"></script>
+    <script src="bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+    <script src="bower_components/eventEmitter/EventEmitter.js"></script>
+    <script src="bower_components/eventie/eventie.js"></script>
+    <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+    <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
+    <script src="bower_components/angular-masonry/angular-masonry.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/momentjs/moment.js"></script>
+    <script src="bower_components/angular-momentjs/angular-momentjs.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/rickshaw/rickshaw.js"></script>
+    <script src="bower_components/angular-rickshaw/rickshaw.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-ui-select/dist/select.js"></script>
+    <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
+    <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+    <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="bower_components/flot/jquery.flot.js"></script>
+    <script src="bower_components/flot/jquery.flot.resize.js"></script>
+    <script src="bower_components/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="bower_components/flot.tooltip/js/jquery.flot.tooltip.js"></script>
+    <script src="bower_components/html.sortable/dist/html.sortable.js"></script>
+    <script src="bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.min.js"></script>
+    <script src="bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.js"></script>
+    <script src="bower_components/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="bower_components/morrisjs/morris.js"></script>
+    <script src="bower_components/momentjs/moment.js"></script>
+    <script src="bower_components/ng-bs-daterangepicker/src/ng-bs-daterangepicker.js"></script>
+    <script src="bower_components/ng-table/dist/ng-table.min.js"></script>
+    <script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+    <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+    <script src="bower_components/owl-carousel/owl-carousel/owl.carousel.min.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular-rangy.min.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular-sanitize.min.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular.min.js"></script>
+    <script src="bower_components/dragular/dist/dragular.min.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/app.js -->
+    <script src="scripts/app.js"></script>
+    <script src="bower_components/angular-mask/ngMask.min.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/directives/navcollapse.js"></script>
+    <script src="scripts/directives/slimscroll.js"></script>
+    <script src="scripts/controllers/navbar-chart.js"></script>
+    <script src="scripts/directives/sparkline.js"></script>
+    <script src="scripts/controllers/dashboard.js"></script>
+    <script src="scripts/directives/collapsesidebar.js"></script>
+    <script src="scripts/directives/ripple.js"></script>
+    <script src="scripts/controllers/nav.js"></script>
+    <script src="scripts/directives/pageloader.js"></script>
+    <script src="scripts/controllers/daterangepicker.js"></script>
+    <script src="scripts/directives/daterangepicker.js"></script>
+    <script src="scripts/controllers/boxedlayout.js"></script>
+    <script src="scripts/controllers/fullwidthlayout.js"></script>
+    <script src="scripts/controllers/sidebarsmlayout.js"></script>
+    <script src="scripts/controllers/sidebarxslayout.js"></script>
+    <script src="scripts/controllers/hzmenu.js"></script>
+    <script src="scripts/controllers/rtl.js"></script>
+    <script src="scripts/directives/tilecontrolclose.js"></script>
+    <script src="scripts/directives/tilecontroltoggle.js"></script>
+    <script src="scripts/directives/tilecontrolrefresh.js"></script>
+    <script src="scripts/directives/tilecontrolfullscreen.js"></script>
+    <script src="scripts/directives/prettyprint.js"></script>
+    <script src="scripts/controllers/ui-lists.js"></script>
+    <script src="scripts/directives/lazymodel.js"></script>
+    <script src="scripts/controllers/ui-buttonsicons.js"></script>
+    <script src="scripts/directives/activatebutton.js"></script>
+    <script src="scripts/controllers/ui-navs.js"></script>
+    <script src="scripts/controllers/ui-modals.js"></script>
+    <script src="scripts/controllers/ui-tiles.js"></script>
+    <script src="scripts/controllers/ui-portlets.js"></script>
+    <script src="scripts/controllers/ui-grid.js"></script>
+    <script src="scripts/controllers/ui-alerts.js"></script>
+    <script src="scripts/controllers/ui-general.js"></script>
+    <script src="scripts/directives/setnganimate.js"></script>
+    <script src="scripts/controllers/ui-tree.js"></script>
+    <script src="scripts/controllers/forms-common.js"></script>
+    <script src="scripts/controllers/forms-validate.js"></script>
+    <script src="scripts/directives/onblurvalidation.js"></script>
+    <script src="scripts/directives/formsubmit.js"></script>
+    <script src="scripts/controllers/forms-wizard.js"></script>
+    <script src="scripts/controllers/form-upload.js"></script>
+    <script src="scripts/controllers/form-img-crop.js"></script>
+    <script src="scripts/controllers/tables-bootstrap.js"></script>
+    <script src="scripts/directives/check-toggler.js"></script>
+    <script src="scripts/controllers/tables-datatables.js"></script>
+    <script src="scripts/controllers/tables-ui-grid.js"></script>
+    <script src="scripts/controllers/tables-ng-table.js"></script>
+    <script src="scripts/controllers/tables-smart-table.js"></script>
+    <script src="scripts/controllers/tables-footable.js"></script>
+    <script src="scripts/directives/chart-morris.js"></script>
+    <script src="scripts/directives/gaugechart.js"></script>
+    <script src="scripts/directives/wrap-owlcarousel.js"></script>
+    <script src="scripts/directives/todofocus.js"></script>
+    <script src="scripts/directives/inputmask.js"></script>
+    <script src="scripts/controllers/ui-widgets.js"></script>
+    <script src="scripts/directives/active-toggle.js"></script>
+    <script src="scripts/controllers/pages-login.js"></script>
+    <script src="scripts/controllers/pages-signup.js"></script>
+    <script src="scripts/controllers/pages-forgot-password.js"></script>
+    <script src="scripts/directives/anchor-scroll.js"></script>
+    <script src="scripts/controllers/offcanvaslayout.js"></script>
+    <script src="scripts/directives/offcanvas-sidebar.js"></script>
+    <script src="scripts/directives/submitvalidate.js"></script>
+    <script src="scripts/directives/native-tab.js"></script>
+    <script src="scripts/controllers/pages-intro.js"></script>
+    <script src="scripts/controllers/ui-dragula.js"></script>
+    <script src="scripts/controllers/material/autocomplete.js"></script>
+    <script src="scripts/controllers/material/bottom-sheet.js"></script>
+    <script src="scripts/controllers/material/buttons.js"></script>
+    <script src="scripts/controllers/material/cards.js"></script>
+    <script src="scripts/controllers/material/checkbox.js"></script>
+    <script src="scripts/controllers/material/chips.js"></script>
+    <script src="scripts/controllers/material/content.js"></script>
+    <script src="scripts/controllers/material/dialog.js"></script>
+    <script src="scripts/controllers/material/divider.js"></script>
+    <script src="scripts/controllers/material/fab-speed-dial.js"></script>
+    <script src="scripts/controllers/material/fab-toolbar.js"></script>
+    <script src="scripts/controllers/material/grid-list.js"></script>
+    <script src="scripts/controllers/material/inputs.js"></script>
+    <script src="scripts/controllers/material/list.js"></script>
+    <script src="scripts/controllers/material/menu.js"></script>
+    <script src="scripts/controllers/material/progress-circular.js"></script>
+    <script src="scripts/controllers/material/progress-linear.js"></script>
+    <script src="scripts/controllers/material/radio-button.js"></script>
+    <script src="scripts/controllers/material/select.js"></script>
+    <script src="scripts/controllers/material/sidenav.js"></script>
+    <script src="scripts/controllers/material/slider.js"></script>
+    <script src="scripts/controllers/material/subheader.js"></script>
+    <script src="scripts/controllers/material/swipe.js"></script>
+    <script src="scripts/controllers/material/switch.js"></script>
+    <script src="scripts/controllers/material/tabs.js"></script>
+    <script src="scripts/controllers/material/toast.js"></script>
+    <script src="scripts/controllers/material/toolbar.js"></script>
+    <script src="scripts/controllers/material/tooltip.js"></script>
+    <script src="scripts/controllers/material/whiteframe.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <script src="http://code.angularjs.org/1.4.6/i18n/angular-locale_tr-tr.js"></script>
+
+
+
+  </body>
+</html>
