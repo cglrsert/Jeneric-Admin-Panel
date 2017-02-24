@@ -1,1 +1,1938 @@
-{"entities":[{"name":"pier","name_tr":"İskele Listesi","is_visible":true,"is_pagination":false,"icon":"flag-o","methods":{"view":{"url":"ticketing/rest/pier/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params":{},"content_type":"json","is_active":true},"detail":{"url":"ticketing/rest/pier/view","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"create":{"url":"ticketing/rest/pier/create","type":"post","headers":[],"default_params":[],"query_params":[],"body_params":{},"content_type":"json","is_active":true},"delete":{"url":"ticketing/rest/pier/delete","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"update":{"url":"ticketing/rest/pier/update","type":"post","headers":["token"],"default_params":[],"query_params":[],"body_params":{},"content_type":"json","is_active":true}},"fields":[{"param":"id","label":null,"type":"text","value":null,"fk_service":null,"mask":null,"validation ":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":false,"is_delete":false,"is_update":false,"is_create":false,"is_required":false,"is_filter":{"value":false,"model":null},"object_model":{"view":"id","detail":null,"update":"id"}},{"param":"name","label":"İskele Adı","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"maxlength","value":100}],"tabIndex":1,"placeholder":"İskele Adını Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"name","detail":"name","update":"name"}},{"param":"isActive","label":"Aktif Mi?","type":"bool","value":null,"fk_service":null,"mask":null,"validation":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":true,"is_delete":false,"is_update":true,"is_create":false,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"isActive","detail":"isActive","update":"isActive"}}]},{"name":"token","name_tr":"Login","is_pagination":false,"is_visible":false,"icon":null,"methods":{"view":{},"create":{"url":"gestas/user/login","type":"post","headers":[],"default_params":[],"query_params":[],"body_params":{"username":null,"password":null},"content_type":"json","is_active":true},"delete":{"url":"gestas/user/logout","type":"get","headers":[],"default_params":[],"query_params":[],"body_params":{}},"update":{}},"fields":[]},{"name":"line","name_tr":"Hat Listesi","is_visible":true,"is_pagination":false,"icon":"road","methods":{"view":{"url":"ticketing/rest/line/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params":{},"content_type":"json","is_active":true},"detail":{"url":"ticketing/rest/line/view","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"create":{"url":"ticketing/rest/line/create","type":"post","headers":[],"default_params":[],"query_params ":[],"body_params":{},"content_type":"json","is_active":true},"delete":{"url":"ticketing/rest/line/delete","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"update":{"url":"ticketing/rest/line/update","type":"post","headers":[],"default_params":[],"query_params":[],"body_params":{},"content_type":"json","is_active":true}},"fields":[{"param":"id","label":null,"type":"text","value":null,"fk_service":null,"mask":null,"validation ":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":false,"is_delete":false,"is_update":false,"is_create":false,"is_required":false,"is_filter":{"value":false,"model":null},"object_model":{"view":"id","detail":null,"update":"id"}},{"param":"name","label":"Hat Adı","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"maxlength","value":100}],"tabIndex":"1","placeholder":"Hat Adını Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"name","detail":"name","update":"name"}},{"param":"isActive","label":"Aktif Mi?","type":"bool","value":null,"fk_service":null,"mask":null,"validation":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":true,"is_delete":false,"is_update":true,"is_create":false,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"isActive","detail":"isActive","update":"isActive"}}]},{"name":"whitelist","name_tr":"Serbest Geçiş","is_visible":true,"is_pagination":false,"icon":"shield","methods":{"view":{"url":"ticketing/rest/whitelist/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params":{},"content_type":"json","is_active":true},"detail":{"url":"ticketing/rest/whitelist/view","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"create":{"url":"ticketing/rest/whitelist/create","type":"post","headers":[],"default_params":[],"query_params ":[],"body_params":{},"content_type":"json","is_active":true},"delete":{"url":"ticketing/rest/whitelist/delete","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"update":{"url":"ticketing/rest/whitelist/update","type":"post","headers":[],"default_params":[],"query_params":[],"body_params":{},"content_type":"json","is_active":true}},"fields":[{"param":"id","label":null,"type":"text","value":null,"fk_service":null,"mask":null,"validation ":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":false,"is_delete":false,"is_update":false,"is_create":false,"is_required":false,"is_filter":{"value":false,"model":null},"object_model":{"view":"id","detail":null,"update":"id"}},{"param":"plate","label":"Plaka","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"plate","value":true}],"tabIndex":"1","placeholder":"Plakayı Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"plate","detail":"plate","update":"plate"}},{"param":"reason","label":"Gerekçe","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"maxlength","value":100}],"tabIndex":"1","placeholder":"Serbest Geçiş Gerekçesi Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"reason","detail":"reason","update":"reason"}},{"param":"isActive","label":"Aktif Mi?","type":"bool","value":null,"fk_service":null,"mask":null,"validation":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":true,"is_delete":false,"is_update":true,"is_create":false,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"isActive","detail":"isActive","update":"isActive"}}]},{"name":"route","name_tr":"Güzergah Listesi","is_visible":true,"is_pagination":false,"icon":"map-o","methods":{"view":{"url":"ticketing/rest/route/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params":{},"content_type":"json","is_active":true},"detail":{"url":"ticketing/rest/route/view","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"create":{"url":"ticketing/rest/route/create","type":"post","headers":[],"default_params":[],"query_params ":[],"body_params":{},"content_type":"json","is_active":true},"delete":{"url":"ticketing/rest/route/delete","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"update":{"url":"ticketing/rest/route/update","type":"post","headers":[],"default_params":[],"query_params":[],"body_params":{},"content_type":"json","is_active":true}},"fields":[{"param":"id","label":null,"type":"text","value":null,"fk_service":null,"mask":null,"validation ":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":false,"is_delete":false,"is_update":false,"is_create":false,"is_required":false,"is_filter":{"value":false,"model":null},"object_model":{"view":"id","detail":null,"update":"id"}},{"param":"name","label":"Güzergah Adı","type":"text","value":"","fk_service":null,"mask":null,"validation":[{"item":"maxlength","value":100}],"tabIndex":1,"placeholder":"Güzergah Adını Giriniz","attributes":null,"component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"name","detail":"name","update":"name"}},{"param":"duration","label":"Güzergah Süresi (dk)","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"digits","value":true}],"tabIndex":2,"placeholder":"Güzergah Süresini Giriniz (dk)","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":false,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"duration","detail":"duration","update":"duration"}},{"param":"lineId","label":"Hat","type":"fk_select","value":"","fk_service":{"url":"ticketing/rest/line/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params ":{},"content_type":"json"},"mask":null,"validation":null,"tabIndex":3,"placeholder":"Hat Seçiniz","attributes":null,"component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"line.name","detail":"line.name","update":"lineId"}},{"param":"isActive","label":"Aktif Mi?","type":"bool","value":null,"fk_service":null,"mask":null,"validation":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":true,"is_delete":false,"is_update":true,"is_create":false,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"isActive","detail":"isActive","update":"isActive"}},{"param":"isOnline","label":"Online","type":"switch","value":null,"fk_service":null,"mask":null,"validation":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":true,"is_detail":true,"is_delete":false,"is_update":true,"is_create":false,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"isOnline","detail":"isOnline","update":"isOnline"}},{"param":"isGestgo","label":"Gestgo","type":"switch","value":null,"fk_service":null,"mask":null,"validation":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":true,"is_detail":true,"is_delete":false,"is_update":true,"is_create":false,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"isGestgo","detail":"isGestgo","update":"isGestgo"}}]},{"name":"trip","name_tr":"Sefer Listesi","is_visible":true,"is_pagination":false,"icon":"map-signs","methods":{"view":{"url":"ticketing/rest/trip/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params":{},"content_type":"json","is_active":true},"detail":{"url":"ticketing/rest/trip/view","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"create":{"url":"ticketing/rest/trip/create","type":"post","headers":[],"default_params":[],"query_params ":[],"body_params":{},"content_type":"json","is_active":true},"delete":{"url":"ticketing/rest/trip/delete","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"update":{"url":"ticketing/rest/trip/update","type":"post","headers":[],"default_params":[],"query_params":[],"body_params":{},"content_type":"json","is_active":true}},"fields":[{"param":"id","label":null,"type":"text","value":null,"fk_service":null,"mask":null,"validation ":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":false,"is_delete":false,"is_update":false,"is_create":false,"is_required":false,"is_filter":{"value":false,"model":null},"object_model":{"view":"id","detail":null,"update":"id"}},{"param":"plannedDeparture","label":"Sefer Tarihi","type":"datetime","value":"","fk_service":null,"mask":null,"validation":[{"item":"datetime","value":true}],"tabIndex":1,"placeholder":"Sefer Tarihini Giriniz","attributes":null,"component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"plannedDeparture","detail":"plannedDeparture","update":"plannedDeparture"}},{"param":"routeId","label":"Güzergah","type":"fk_select","value":"","fk_service":{"url":"ticketing/rest/route/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params ":{},"content_type":"json"},"mask":null,"validation":null,"tabIndex":2,"placeholder":"Güzergah Seçiniz","attributes":null,"component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"route.name","detail":"route.name","update":"routeId"}},{"param":"ferryId","label":"Gemi","type":"fk_select","value":"","fk_service":{"url":"ticketing/rest/ferry/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params ":{},"content_type":"json"},"mask":null,"validation":null,"tabIndex":3,"placeholder":"Gemi Seçiniz","attributes":null,"component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"ferry.name","detail":"ferry.name","update":"ferryId"}},{"param":"tripType","label":"Sefer Tipi","type":"select","value":[{"key":0,"value":"PLANNED"},{"key":1,"value":"EXTRA"}],"fk_service":null,"mask":null,"validation":"null","tabIndex":4,"placeholder":"Sefer Tipi Giriniz","attributes":null,"component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"tripType","detail":"tripType","update":"tripType"}},{"param":"tripStatus","label":"Sefer Durumu","type":"select","value":[{"key":0,"value":"PLANNED"},{"key":1,"value":"TRAVELLED"},{"key":2,"value":"CANCELLED"}],"fk_service":null,"mask":null,"validation":"null","tabIndex":5,"placeholder":"Sefer Durumu Giriniz","attributes":null,"component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"tripStatus","detail":"tripStatus","update":"tripStatus"}},{"param":"description","label":"Sefer Açıklaması","type":"text","value":"null","fk_service":null,"mask":null,"validation":[{"item":"maxlength","value":100}],"tabIndex":1,"placeholder":"Sefer Açıklaması Giriniz","attributes":null,"component_params":null,"is_hidden":false,"is_view":false,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"description","detail":"description","update":"description"}},{"param":"isActive","label":"Aktif Mi?","type":"bool","value":null,"fk_service":null,"mask":null,"validation":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":true,"is_delete":false,"is_update":true,"is_create":false,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"isActive","detail":"isActive","update":"isActive"}}]},{"name":"routePier","name_tr":"Güzergah-İskele","is_visible":true,"is_pagination":false,"icon":"code-fork","methods":{"view":{"url":"ticketing/rest/routepier/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params":{},"content_type":"json","is_active":true},"detail":{"url":"ticketing/rest/routepier/view","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"create":{"url":"ticketing/rest/routepier/create","type":"post","headers":[],"default_params":[],"query_params ":[],"body_params":{},"content_type":"json","is_active":true},"delete":{"url":"ticketing/rest/routepier/delete","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"update":{"url":"ticketing/rest/routepier/update","type":"post","headers":[],"default_params":[],"query_params":[],"body_params":{},"content_type":"json","is_active":true}},"fields":[{"param":"id","label":null,"type":"text","value":null,"fk_service":null,"mask":null,"validation ":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":false,"is_delete":false,"is_update":false,"is_create":false,"is_required":false,"is_filter":{"value":false,"model":null},"object_model":{"view":"id","detail":null,"update":"id"}},{"param":"pierId","label":"İskele Adı","type":"fk_select","value":"","fk_service":{"url":"ticketing/rest/pier/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params ":{},"content_type":"json"},"mask":null,"validation":null,"tabIndex":1,"placeholder":"İskele Seçiniz","attributes":null,"component_params":null,"is_hidden":false,"is_view":false,"is_detail":true,"is_delete":true,"is_update":false,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":null,"detail":null,"update":"routeId"}},{"param":"routeId","label":"Güzergah Adı","type":"fk_select","value":"","fk_service":{"url":"ticketing/rest/route/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params ":{},"content_type":"json"},"mask":null,"validation":null,"tabIndex":2,"placeholder":"Güzergah Seçiniz","attributes":null,"component_params":null,"is_hidden":false,"is_view":false,"is_detail":true,"is_delete":true,"is_update":false,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":null,"detail":null,"update":"routeId"}},{"param":"duration","label":"Güzergah Süresi (dk)","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"digits","value":true}],"tabIndex":3,"placeholder":"Güzergah Süresini Giriniz (dk)","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"duration","detail":"duration","update":"duration"}},{"param":"pierOrder","label":"Güzergah Sırası","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"digits","value":true}],"tabIndex":4,"placeholder":"Güzergah Sırasını Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":false,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"pierOrder","detail":"pierOrder","update":"pierOrder"}}]},{"name":"boarder","name_tr":"Taşıma Tipleri","is_visible":true,"is_pagination":false,"icon":"users","methods":{"view":{"url":"ticketing/rest/boarder/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params":{},"content_type":"json","is_active":true},"detail":{"url":"ticketing/rest/boarder/view","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"create":{"url":"ticketing/rest/boarder/create","type":"post","headers":[],"default_params":[],"query_params ":[],"body_params":{},"content_type":"json","is_active":false},"delete":{"url":"ticketing/rest/boarder/delete","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"update":{"url":"ticketing/rest/boarder/update","type":"post","headers":[],"default_params":[],"query_params":[],"body_params":{},"content_type":"json","is_active":true}},"fields":[{"param":"id","label":null,"type":"text","value":null,"fk_service":null,"mask":null,"validation ":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":false,"is_delete":false,"is_update":false,"is_create":false,"is_required":false,"is_filter":{"value":false,"model":null},"object_model":{"view":"id","detail":"id","update":"id"}},{"param":"name","label":"Gemiye Binen Adı","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"maxlength","value":100}],"tabIndex":1,"placeholder":"Gemiye Binen Adını Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"name","detail":"name","update":"name"}},{"param":"type","label":"Gemiye Binen Tipi","type":"select","value":[{"key":1,"value":"VEHICLE"},{"key":2,"value":"PASSENGER"},{"key":3,"value":"OTHERS"}],"fk_service":null,"mask":"","validation":"null","tabIndex":2,"placeholder":"Gemiye Binen Tipi Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"type","detail":"type","update":"typeId"}},{"param":"passengerLimit","label":"Yolcu Limiti","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"digits","value":true}],"tabIndex":3,"placeholder":"Yolcu Limiti Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"passengerLimit","detail":"passengerLimit","update":"passengerLimit"}},{"param":"volume","label":"Hacim","type":"text","value":"","fk_service":null,"mask":"","validation":"null","tabIndex":4,"placeholder":"Hacim Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":false,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"volume","detail":"volume","update":"volume"}}]},{"name":"ferry","name_tr":"Gemi","is_visible":true,"is_pagination":false,"icon":"ship","methods":{"view":{"url":"ticketing/rest/ferry/view/all","type":"post","headers":[],"default_params":["limit","offset","orderBy","orderType"],"query_params":[],"body_params":{},"content_type":"json","is_active":true},"detail":{"url":"ticketing/rest/ferry/view","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"create":{"url":"ticketing/rest/ferry/create","type":"post","headers":[],"default_params":[],"query_params ":[],"body_params":{},"content_type":"json","is_active":false},"delete":{"url":"ticketing/rest/ferry/delete","type":"get","headers":[],"default_params":[],"query_params":["id"],"body_params":{},"content_type":"json","is_active":true},"update":{"url":"ticketing/rest/ferry/update","type":"post","headers":[],"default_params":[],"query_params":[],"body_params":{},"content_type":"json","is_active":true}},"fields":[{"param":"id","label":null,"type":"text","value":null,"fk_service":null,"mask":null,"validation ":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":false,"is_delete":false,"is_update":false,"is_create":false,"is_required":false,"is_filter":{"value":false,"model":null},"object_model":{"view":"id","detail":"id","update":"id"}},{"param":"name","label":"Gemi Adı","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"maxlength","value":100}],"tabIndex":1,"placeholder":"Gemi Adı Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"name","detail":"name","update":"name"}},{"param":"ferryType","label":"Gemi Tipi","type":"select","value":[{"key":0,"value":"FERRYBOAT"},{"key":1,"value":"SEABUS"}],"fk_service":null,"mask":"","validation":"null","tabIndex":2,"placeholder":"Gemi Tipi Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"ferryType","detail":"ferryType","update":"ferryType"}},{"param":"capacity","label":"Kapasite","type":"text","value":"","fk_service":null,"mask":"","validation":[{"item":"digits","value":true}],"tabIndex":3,"placeholder":"Kapasite Giriniz","attributes":"","component_params":null,"is_hidden":false,"is_view":true,"is_detail":true,"is_delete":true,"is_update":true,"is_create":true,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"capacity","detail":"capacity","update":"capacity"}},{"param":"isActive","label":"Aktif Mi?","type":"bool","value":null,"fk_service":null,"mask":null,"validation":null,"tabIndex":null,"placeholder":null,"attributes":null,"component_params":null,"is_hidden":true,"is_view":false,"is_detail":true,"is_delete":false,"is_update":true,"is_create":false,"is_required":true,"is_filter":{"value":false,"model":null},"object_model":{"view":"isActive","detail":"isActive","update":"isActive"}}]}]}
+{
+  "entities": [
+    {
+      "name": "pier",
+      "name_tr": "İskele Listesi",
+      "is_visible": true,
+      "is_pagination": false,
+      "icon": "flag-o",
+      "methods": {
+        "view": {
+          "url": "ticketing/rest/pier/view/all",
+          "type": "post",
+          "headers": [],
+          "default_params": [
+            "limit",
+            "offset",
+            "orderBy",
+            "orderType"
+          ],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "detail": {
+          "url": "ticketing/rest/pier/view",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "create": {
+          "url": "ticketing/rest/pier/create",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "delete": {
+          "url": "ticketing/rest/pier/delete",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "update": {
+          "url": "ticketing/rest/pier/update",
+          "type": "post",
+          "headers": [
+            "token"
+          ],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        }
+      },
+      "fields": [
+        {
+          "param": "id",
+          "label": null,
+          "type": "text",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation ": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": false,
+          "is_delete": false,
+          "is_update": false,
+          "is_create": false,
+          "is_required": false,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "id",
+            "detail": null,
+            "update": "id"
+          }
+        },
+        {
+          "param": "name",
+          "label": "İskele Adı",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "maxlength",
+              "value": 100
+            }
+          ],
+          "tabIndex": 1,
+          "placeholder": "İskele Adını Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "name",
+            "detail": "name",
+            "update": "name"
+          }
+        },
+        {
+          "param": "isActive",
+          "label": "Aktif Mi?",
+          "type": "bool",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": true,
+          "is_delete": false,
+          "is_update": true,
+          "is_create": false,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "isActive",
+            "detail": "isActive",
+            "update": "isActive"
+          }
+        }
+      ]
+    },
+    {
+      "name": "token",
+      "name_tr": "Login",
+      "is_pagination": false,
+      "is_visible": false,
+      "icon": null,
+      "methods": {
+        "view": {},
+        "create": {
+          "url": "gestas/user/login",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {
+            "username": null,
+            "password": null
+          },
+          "content_type": "json",
+          "is_active": true
+        },
+        "delete": {
+          "url": "gestas/user/logout",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {}
+        },
+        "update": {}
+      },
+      "fields": []
+    },
+    {
+      "name": "line",
+      "name_tr": "Hat Listesi",
+      "is_visible": true,
+      "is_pagination": false,
+      "icon": "road",
+      "methods": {
+        "view": {
+          "url": "ticketing/rest/line/view/all",
+          "type": "post",
+          "headers": [],
+          "default_params": [
+            "limit",
+            "offset",
+            "orderBy",
+            "orderType"
+          ],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "detail": {
+          "url": "ticketing/rest/line/view",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "create": {
+          "url": "ticketing/rest/line/create",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params ": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "delete": {
+          "url": "ticketing/rest/line/delete",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "update": {
+          "url": "ticketing/rest/line/update",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        }
+      },
+      "fields": [
+        {
+          "param": "id",
+          "label": null,
+          "type": "text",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation ": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": false,
+          "is_delete": false,
+          "is_update": false,
+          "is_create": false,
+          "is_required": false,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "id",
+            "detail": null,
+            "update": "id"
+          }
+        },
+        {
+          "param": "name",
+          "label": "Hat Adı",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "maxlength",
+              "value": 100
+            }
+          ],
+          "tabIndex": "1",
+          "placeholder": "Hat Adını Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "name",
+            "detail": "name",
+            "update": "name"
+          }
+        },
+        {
+          "param": "isActive",
+          "label": "Aktif Mi?",
+          "type": "bool",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": true,
+          "is_delete": false,
+          "is_update": true,
+          "is_create": false,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "isActive",
+            "detail": "isActive",
+            "update": "isActive"
+          }
+        }
+      ]
+    },
+    {
+      "name": "whitelist",
+      "name_tr": "Serbest Geçiş",
+      "is_visible": true,
+      "is_pagination": false,
+      "icon": "shield",
+      "methods": {
+        "view": {
+          "url": "ticketing/rest/whitelist/view/all",
+          "type": "post",
+          "headers": [],
+          "default_params": [
+            "limit",
+            "offset",
+            "orderBy",
+            "orderType"
+          ],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "detail": {
+          "url": "ticketing/rest/whitelist/view",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "create": {
+          "url": "ticketing/rest/whitelist/create",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params ": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "delete": {
+          "url": "ticketing/rest/whitelist/delete",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "update": {
+          "url": "ticketing/rest/whitelist/update",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        }
+      },
+      "fields": [
+        {
+          "param": "id",
+          "label": null,
+          "type": "text",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation ": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": false,
+          "is_delete": false,
+          "is_update": false,
+          "is_create": false,
+          "is_required": false,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "id",
+            "detail": null,
+            "update": "id"
+          }
+        },
+        {
+          "param": "plate",
+          "label": "Plaka",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "plate",
+              "value": true
+            }
+          ],
+          "tabIndex": "1",
+          "placeholder": "Plakayı Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "plate",
+            "detail": "plate",
+            "update": "plate"
+          }
+        },
+        {
+          "param": "reason",
+          "label": "Gerekçe",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "maxlength",
+              "value": 100
+            }
+          ],
+          "tabIndex": "1",
+          "placeholder": "Serbest Geçiş Gerekçesi Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "reason",
+            "detail": "reason",
+            "update": "reason"
+          }
+        },
+        {
+          "param": "isActive",
+          "label": "Aktif Mi?",
+          "type": "bool",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": true,
+          "is_delete": false,
+          "is_update": true,
+          "is_create": false,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "isActive",
+            "detail": "isActive",
+            "update": "isActive"
+          }
+        }
+      ]
+    },
+    {
+      "name": "route",
+      "name_tr": "Güzergah Listesi",
+      "is_visible": true,
+      "is_pagination": false,
+      "icon": "map-o",
+      "methods": {
+        "view": {
+          "url": "ticketing/rest/route/view/all",
+          "type": "post",
+          "headers": [],
+          "default_params": [
+            "limit",
+            "offset",
+            "orderBy",
+            "orderType"
+          ],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "detail": {
+          "url": "ticketing/rest/route/view",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "create": {
+          "url": "ticketing/rest/route/create",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params ": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "delete": {
+          "url": "ticketing/rest/route/delete",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "update": {
+          "url": "ticketing/rest/route/update",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        }
+      },
+      "fields": [
+        {
+          "param": "id",
+          "label": null,
+          "type": "text",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation ": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": false,
+          "is_delete": false,
+          "is_update": false,
+          "is_create": false,
+          "is_required": false,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "id",
+            "detail": null,
+            "update": "id"
+          }
+        },
+        {
+          "param": "name",
+          "label": "Güzergah Adı",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": null,
+          "validation": [
+            {
+              "item": "maxlength",
+              "value": 100
+            }
+          ],
+          "tabIndex": 1,
+          "placeholder": "Güzergah Adını Giriniz",
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "name",
+            "detail": "name",
+            "update": "name"
+          }
+        },
+        {
+          "param": "duration",
+          "label": "Güzergah Süresi (dk)",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "digits",
+              "value": true
+            }
+          ],
+          "tabIndex": 2,
+          "placeholder": "Güzergah Süresini Giriniz (dk)",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": false,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "duration",
+            "detail": "duration",
+            "update": "duration"
+          }
+        },
+        {
+          "param": "lineId",
+          "label": "Hat",
+          "type": "fk_select",
+          "value": "",
+          "fk_service": {
+            "url": "ticketing/rest/line/view/all",
+            "type": "post",
+            "headers": [],
+            "default_params": [
+              "limit",
+              "offset",
+              "orderBy",
+              "orderType"
+            ],
+            "query_params": [],
+            "body_params ": {},
+            "content_type": "json"
+          },
+          "mask": null,
+          "validation": null,
+          "tabIndex": 3,
+          "placeholder": "Hat Seçiniz",
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "line.name",
+            "detail": "line.name",
+            "update": "lineId"
+          }
+        },
+        {
+          "param": "isActive",
+          "label": "Aktif Mi?",
+          "type": "bool",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": true,
+          "is_delete": false,
+          "is_update": true,
+          "is_create": false,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "isActive",
+            "detail": "isActive",
+            "update": "isActive"
+          }
+        },
+        {
+          "param": "isOnline",
+          "label": "Online",
+          "type": "switch",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": false,
+          "is_update": true,
+          "is_create": false,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "isOnline",
+            "detail": "isOnline",
+            "update": "isOnline"
+          }
+        },
+        {
+          "param": "isGestgo",
+          "label": "Gestgo",
+          "type": "switch",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": false,
+          "is_update": true,
+          "is_create": false,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "isGestgo",
+            "detail": "isGestgo",
+            "update": "isGestgo"
+          }
+        }
+      ]
+    },
+    {
+      "name": "trip",
+      "name_tr": "Sefer Listesi",
+      "is_visible": true,
+      "is_pagination": false,
+      "icon": "map-signs",
+      "methods": {
+        "view": {
+          "url": "ticketing/rest/trip/view/all",
+          "type": "post",
+          "headers": [],
+          "default_params": [
+            "limit",
+            "offset",
+            "orderBy",
+            "orderType"
+          ],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "detail": {
+          "url": "ticketing/rest/trip/view",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "create": {
+          "url": "ticketing/rest/trip/create",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params ": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "delete": {
+          "url": "ticketing/rest/trip/delete",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "update": {
+          "url": "ticketing/rest/trip/update",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        }
+      },
+      "fields": [
+        {
+          "param": "id",
+          "label": null,
+          "type": "text",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation ": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": false,
+          "is_delete": false,
+          "is_update": false,
+          "is_create": false,
+          "is_required": false,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "id",
+            "detail": null,
+            "update": "id"
+          }
+        },
+        {
+          "param": "plannedDeparture",
+          "label": "Sefer Tarihi",
+          "type": "datetime",
+          "value": "",
+          "fk_service": null,
+          "mask": null,
+          "validation": [
+            {
+              "item": "datetime",
+              "value": true
+            }
+          ],
+          "tabIndex": 1,
+          "placeholder": "Sefer Tarihini Giriniz",
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "plannedDeparture",
+            "detail": "plannedDeparture",
+            "update": "plannedDeparture"
+          }
+        },
+        {
+          "param": "routeId",
+          "label": "Güzergah",
+          "type": "fk_select",
+          "value": "",
+          "fk_service": {
+            "url": "ticketing/rest/route/view/all",
+            "type": "post",
+            "headers": [],
+            "default_params": [
+              "limit",
+              "offset",
+              "orderBy",
+              "orderType"
+            ],
+            "query_params": [],
+            "body_params ": {},
+            "content_type": "json"
+          },
+          "mask": null,
+          "validation": null,
+          "tabIndex": 2,
+          "placeholder": "Güzergah Seçiniz",
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "route.name",
+            "detail": "route.name",
+            "update": "routeId"
+          }
+        },
+        {
+          "param": "ferryId",
+          "label": "Gemi",
+          "type": "fk_select",
+          "value": "",
+          "fk_service": {
+            "url": "ticketing/rest/ferry/view/all",
+            "type": "post",
+            "headers": [],
+            "default_params": [
+              "limit",
+              "offset",
+              "orderBy",
+              "orderType"
+            ],
+            "query_params": [],
+            "body_params ": {},
+            "content_type": "json"
+          },
+          "mask": null,
+          "validation": null,
+          "tabIndex": 3,
+          "placeholder": "Gemi Seçiniz",
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "ferry.name",
+            "detail": "ferry.name",
+            "update": "ferryId"
+          }
+        },
+        {
+          "param": "tripType",
+          "label": "Sefer Tipi",
+          "type": "select",
+          "value": [
+            {
+              "key": 0,
+              "value": "PLANNED"
+            },
+            {
+              "key": 1,
+              "value": "EXTRA"
+            }
+          ],
+          "fk_service": null,
+          "mask": null,
+          "validation": "null",
+          "tabIndex": 4,
+          "placeholder": "Sefer Tipi Giriniz",
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "tripType",
+            "detail": "tripType",
+            "update": "tripType"
+          }
+        },
+        {
+          "param": "tripStatus",
+          "label": "Sefer Durumu",
+          "type": "select",
+          "value": [
+            {
+              "key": 0,
+              "value": "PLANNED"
+            },
+            {
+              "key": 1,
+              "value": "TRAVELLED"
+            },
+            {
+              "key": 2,
+              "value": "CANCELLED"
+            }
+          ],
+          "fk_service": null,
+          "mask": null,
+          "validation": "null",
+          "tabIndex": 5,
+          "placeholder": "Sefer Durumu Giriniz",
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "tripStatus",
+            "detail": "tripStatus",
+            "update": "tripStatus"
+          }
+        },
+        {
+          "param": "description",
+          "label": "Sefer Açıklaması",
+          "type": "text",
+          "value": "null",
+          "fk_service": null,
+          "mask": null,
+          "validation": [
+            {
+              "item": "maxlength",
+              "value": 100
+            }
+          ],
+          "tabIndex": 1,
+          "placeholder": "Sefer Açıklaması Giriniz",
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": false,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "description",
+            "detail": "description",
+            "update": "description"
+          }
+        },
+        {
+          "param": "isActive",
+          "label": "Aktif Mi?",
+          "type": "bool",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": true,
+          "is_delete": false,
+          "is_update": true,
+          "is_create": false,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "isActive",
+            "detail": "isActive",
+            "update": "isActive"
+          }
+        }
+      ]
+    },
+    {
+      "name": "routePier",
+      "name_tr": "Güzergah-İskele",
+      "is_visible": true,
+      "is_pagination": false,
+      "icon": "code-fork",
+      "methods": {
+        "view": {
+          "url": "ticketing/rest/routepier/view/all",
+          "type": "post",
+          "headers": [],
+          "default_params": [
+            "limit",
+            "offset",
+            "orderBy",
+            "orderType"
+          ],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "detail": {
+          "url": "ticketing/rest/routepier/view",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "create": {
+          "url": "ticketing/rest/routepier/create",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params ": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "delete": {
+          "url": "ticketing/rest/routepier/delete",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "update": {
+          "url": "ticketing/rest/routepier/update",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        }
+      },
+      "fields": [
+        {
+          "param": "id",
+          "label": null,
+          "type": "text",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation ": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": false,
+          "is_delete": false,
+          "is_update": false,
+          "is_create": false,
+          "is_required": false,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "id",
+            "detail": null,
+            "update": "id"
+          }
+        },
+        {
+          "param": "pierId",
+          "label": "İskele Adı",
+          "type": "fk_select",
+          "value": "",
+          "fk_service": {
+            "url": "ticketing/rest/pier/view/all",
+            "type": "post",
+            "headers": [],
+            "default_params": [
+              "limit",
+              "offset",
+              "orderBy",
+              "orderType"
+            ],
+            "query_params": [],
+            "body_params ": {},
+            "content_type": "json"
+          },
+          "mask": null,
+          "validation": null,
+          "tabIndex": 1,
+          "placeholder": "İskele Seçiniz",
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": false,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": false,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": null,
+            "detail": null,
+            "update": "routeId"
+          }
+        },
+        {
+          "param": "routeId",
+          "label": "Güzergah Adı",
+          "type": "fk_select",
+          "value": "",
+          "fk_service": {
+            "url": "ticketing/rest/route/view/all",
+            "type": "post",
+            "headers": [],
+            "default_params": [
+              "limit",
+              "offset",
+              "orderBy",
+              "orderType"
+            ],
+            "query_params": [],
+            "body_params ": {},
+            "content_type": "json"
+          },
+          "mask": null,
+          "validation": null,
+          "tabIndex": 2,
+          "placeholder": "Güzergah Seçiniz",
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": false,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": false,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": null,
+            "detail": null,
+            "update": "routeId"
+          }
+        },
+        {
+          "param": "duration",
+          "label": "Güzergah Süresi (dk)",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "digits",
+              "value": true
+            }
+          ],
+          "tabIndex": 3,
+          "placeholder": "Güzergah Süresini Giriniz (dk)",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "duration",
+            "detail": "duration",
+            "update": "duration"
+          }
+        },
+        {
+          "param": "pierOrder",
+          "label": "Güzergah Sırası",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "digits",
+              "value": true
+            }
+          ],
+          "tabIndex": 4,
+          "placeholder": "Güzergah Sırasını Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": false,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "pierOrder",
+            "detail": "pierOrder",
+            "update": "pierOrder"
+          }
+        }
+      ]
+    },
+    {
+      "name": "boarder",
+      "name_tr": "Taşıma Tipleri",
+      "is_visible": true,
+      "is_pagination": false,
+      "icon": "users",
+      "methods": {
+        "view": {
+          "url": "ticketing/rest/boarder/view/all",
+          "type": "post",
+          "headers": [],
+          "default_params": [
+            "limit",
+            "offset",
+            "orderBy",
+            "orderType"
+          ],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "detail": {
+          "url": "ticketing/rest/boarder/view",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "create": {
+          "url": "ticketing/rest/boarder/create",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params ": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": false
+        },
+        "delete": {
+          "url": "ticketing/rest/boarder/delete",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "update": {
+          "url": "ticketing/rest/boarder/update",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        }
+      },
+      "fields": [
+        {
+          "param": "id",
+          "label": null,
+          "type": "text",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation ": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": false,
+          "is_delete": false,
+          "is_update": false,
+          "is_create": false,
+          "is_required": false,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "id",
+            "detail": "id",
+            "update": "id"
+          }
+        },
+        {
+          "param": "name",
+          "label": "Gemiye Binen Adı",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "maxlength",
+              "value": 100
+            }
+          ],
+          "tabIndex": 1,
+          "placeholder": "Gemiye Binen Adını Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "name",
+            "detail": "name",
+            "update": "name"
+          }
+        },
+        {
+          "param": "type",
+          "label": "Gemiye Binen Tipi",
+          "type": "select",
+          "value": [
+            {
+              "key": 1,
+              "value": "VEHICLE"
+            },
+            {
+              "key": 2,
+              "value": "PASSENGER"
+            },
+            {
+              "key": 3,
+              "value": "OTHERS"
+            }
+          ],
+          "fk_service": null,
+          "mask": "",
+          "validation": "null",
+          "tabIndex": 2,
+          "placeholder": "Gemiye Binen Tipi Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "type",
+            "detail": "type",
+            "update": "typeId"
+          }
+        },
+        {
+          "param": "passengerLimit",
+          "label": "Yolcu Limiti",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "digits",
+              "value": true
+            }
+          ],
+          "tabIndex": 3,
+          "placeholder": "Yolcu Limiti Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "passengerLimit",
+            "detail": "passengerLimit",
+            "update": "passengerLimit"
+          }
+        },
+        {
+          "param": "volume",
+          "label": "Hacim",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": "null",
+          "tabIndex": 4,
+          "placeholder": "Hacim Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": false,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "volume",
+            "detail": "volume",
+            "update": "volume"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ferry",
+      "name_tr": "Gemi",
+      "is_visible": true,
+      "is_pagination": false,
+      "icon": "ship",
+      "methods": {
+        "view": {
+          "url": "ticketing/rest/ferry/view/all",
+          "type": "post",
+          "headers": [],
+          "default_params": [
+            "limit",
+            "offset",
+            "orderBy",
+            "orderType"
+          ],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "detail": {
+          "url": "ticketing/rest/ferry/view",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "create": {
+          "url": "ticketing/rest/ferry/create",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params ": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": false
+        },
+        "delete": {
+          "url": "ticketing/rest/ferry/delete",
+          "type": "get",
+          "headers": [],
+          "default_params": [],
+          "query_params": [
+            "id"
+          ],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        },
+        "update": {
+          "url": "ticketing/rest/ferry/update",
+          "type": "post",
+          "headers": [],
+          "default_params": [],
+          "query_params": [],
+          "body_params": {},
+          "content_type": "json",
+          "is_active": true
+        }
+      },
+      "fields": [
+        {
+          "param": "id",
+          "label": null,
+          "type": "text",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation ": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": false,
+          "is_delete": false,
+          "is_update": false,
+          "is_create": false,
+          "is_required": false,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "id",
+            "detail": "id",
+            "update": "id"
+          }
+        },
+        {
+          "param": "name",
+          "label": "Gemi Adı",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "maxlength",
+              "value": 100
+            }
+          ],
+          "tabIndex": 1,
+          "placeholder": "Gemi Adı Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "name",
+            "detail": "name",
+            "update": "name"
+          }
+        },
+        {
+          "param": "ferryType",
+          "label": "Gemi Tipi",
+          "type": "select",
+          "value": [
+            {
+              "key": 0,
+              "value": "FERRYBOAT"
+            },
+            {
+              "key": 1,
+              "value": "SEABUS"
+            }
+          ],
+          "fk_service": null,
+          "mask": "",
+          "validation": "null",
+          "tabIndex": 2,
+          "placeholder": "Gemi Tipi Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "ferryType",
+            "detail": "ferryType",
+            "update": "ferryType"
+          }
+        },
+        {
+          "param": "capacity",
+          "label": "Kapasite",
+          "type": "text",
+          "value": "",
+          "fk_service": null,
+          "mask": "",
+          "validation": [
+            {
+              "item": "digits",
+              "value": true
+            }
+          ],
+          "tabIndex": 3,
+          "placeholder": "Kapasite Giriniz",
+          "attributes": "",
+          "component_params": null,
+          "is_hidden": false,
+          "is_view": true,
+          "is_detail": true,
+          "is_delete": true,
+          "is_update": true,
+          "is_create": true,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "capacity",
+            "detail": "capacity",
+            "update": "capacity"
+          }
+        },
+        {
+          "param": "isActive",
+          "label": "Aktif Mi?",
+          "type": "bool",
+          "value": null,
+          "fk_service": null,
+          "mask": null,
+          "validation": null,
+          "tabIndex": null,
+          "placeholder": null,
+          "attributes": null,
+          "component_params": null,
+          "is_hidden": true,
+          "is_view": false,
+          "is_detail": true,
+          "is_delete": false,
+          "is_update": true,
+          "is_create": false,
+          "is_required": true,
+          "is_filter": {
+            "value": false,
+            "model": null
+          },
+          "object_model": {
+            "view": "isActive",
+            "detail": "isActive",
+            "update": "isActive"
+          }
+        }
+      ]
+    }
+  ]
+}
