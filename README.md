@@ -1,4 +1,4 @@
-# Jeneric-Admin-Panel
+# Generic-Admin-Panel
 Create Admin Panels Dynamically using AngularJS
 
 # Build & development
