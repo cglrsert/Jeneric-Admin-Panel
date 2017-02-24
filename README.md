@@ -8,6 +8,8 @@ Finally run 'grunt serve' for building.
 
 NodeJS, Bower, Ruby, Grunt must be installed to run the app.
 
+As a template, used Minovate.
+
 # App Logic
 
 The main logic of the application is in scripts/app.js. 
